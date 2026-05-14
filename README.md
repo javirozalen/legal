@@ -14,4 +14,4 @@ but may not be copied, modified, or redistributed.
 ## Apps covered
 
 - Focused — [link to repository](https://github.com/javirozalen/Focused.git)
-- Frases Rajoy — [link to repository](https://github.com/javirozalen/frases-de-rajoy.git)
+- Frases de Rajoy — [Privacy Policy](./frases-de-rajoy/privacy-policy.md) · [Terms of Service](./frases-de-rajoy/terms-of-service.md) · [source](https://github.com/javirozalen/Frases-De-Rajoy)
