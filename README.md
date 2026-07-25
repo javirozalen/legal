@@ -14,5 +14,5 @@ but may not be copied, modified, or redistributed.
 ## Apps covered
 
 - Focused — [link to repository](https://github.com/javirozalen/Focused.git)
-- Frases de Rajoy — [Privacy Policy](./frases-de-rajoy/privacy-policy.md) · [Terms of Service](./frases-de-rajoy/terms-of-service.md) · [source](https://github.com/javirozalen/Frases-De-Rajoy)
+- Frases de Rajoy — [Privacy Policy](./frases-de-rajoy/privacy-policy.md) · [Terms of Service](./frases-de-rajoy/terms-of-service.md)
 - Vulto — [Privacy Policy](./vulto/privacy-policy.md) · [Terms of Service](./vulto/terms-of-service.md)
