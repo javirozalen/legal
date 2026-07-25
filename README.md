@@ -1,7 +1,7 @@
 # Legal Documents
 
 Privacy policies, terms of service, and related legal documents
-for apps developed by [Your Name].
+for apps developed by HTBR.
 
 ## Copyright
 
@@ -15,3 +15,4 @@ but may not be copied, modified, or redistributed.
 
 - Focused — [link to repository](https://github.com/javirozalen/Focused.git)
 - Frases de Rajoy — [Privacy Policy](./frases-de-rajoy/privacy-policy.md) · [Terms of Service](./frases-de-rajoy/terms-of-service.md) · [source](https://github.com/javirozalen/Frases-De-Rajoy)
+- Vulto — [Privacy Policy](./vulto/privacy-policy.md) · [Terms of Service](./vulto/terms-of-service.md)
