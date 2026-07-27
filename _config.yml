@@ -1,0 +1,21 @@
+# GitHub Pages configuration for the public legal documents repo.
+#
+# No `theme:` is set on purpose. _layouts/legal.html is fully self-contained
+# (its own CSS, light + dark palettes, and the theme toggle), so a gem theme
+# would only add a hardcoded-light stylesheet to fight with.
+#
+# The `defaults` block applies the layout to every Markdown page in the repo,
+# including per-app subfolders. Generated documents therefore need no front
+# matter, and /sync-legal-docs can keep copying plain .md files unchanged.
+
+title: Legal Documents
+description: Privacy policies and terms of service for apps developed by HTBR.
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "legal"
+
+exclude:
+  - README-dev.md
