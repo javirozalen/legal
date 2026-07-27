@@ -11,6 +11,13 @@
 title: Legal Documents
 description: Privacy policies and terms of service for apps developed by HTBR.
 
+# The documents write "**Effective date:** ...\n**Last updated:** ..." as two
+# consecutive lines. Markdown collapses a single newline into a space, which ran
+# those two labels together on one line. `hard_wrap` renders them as <br>, so
+# each stays on its own line without touching the generated documents.
+kramdown:
+  hard_wrap: true
+
 defaults:
   - scope:
       path: ""
