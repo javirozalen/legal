@@ -1,10 +1,91 @@
+{%- comment -%}
+  Language variants are derived from the FILENAME, not from front matter, so the
+  synced documents stay free of navigation markup (see /sync-legal-docs: files are
+  copied verbatim). A Spanish variant is "<basename>.es.md" alongside the English
+  "<basename>.md"; `lang_suffix` is the BCP-47 base subtag or empty for English.
+
+  The sibling URL is only emitted when that sibling actually EXISTS in the built
+  site — a toggle pointing at a missing translation is worse than no toggle, and
+  apps without translations (e.g. vulto) must render exactly as before.
+{%- endcomment -%}
+{%- assign path_no_ext = page.url | remove: '.html' -%}
+{%- assign url_parts = path_no_ext | split: '/' -%}
+{%- assign base_name = url_parts | last -%}
+
+{%- comment -%} Directory prefix = everything up to and including the last '/'. {%- endcomment -%}
+{%- capture dir_path -%}{%- for seg in url_parts offset: 0 -%}{%- unless forloop.last -%}{{ seg }}/{%- endunless -%}{%- endfor -%}{%- endcapture -%}
+
+{%- comment -%}
+  Split the basename on '.'. A trailing segment that is a configured language
+  subtag marks a translated variant; anything else (e.g. a doc legitimately
+  containing a dot) is treated as part of the stem.
+{%- endcomment -%}
+{%- comment -%}
+  NOTE: do not use the `replace_last` filter here. It is Liquid 5+, and GitHub
+  Pages pins Jekyll 3.x / Liquid 4, where it silently returns the string
+  UNCHANGED — which made the Spanish page link to itself. Rebuild the stem by
+  re-joining every segment except a trailing language subtag instead.
+{%- endcomment -%}
+{%- assign name_parts = base_name | split: '.' -%}
+{%- assign lang_suffix = '' -%}
+{%- assign doc_stem = base_name -%}
+{%- if name_parts.size > 1 -%}
+  {%- assign maybe_lang = name_parts | last -%}
+  {%- if site.legal_languages contains maybe_lang -%}
+    {%- assign lang_suffix = maybe_lang -%}
+    {%- assign keep_count = name_parts.size | minus: 1 -%}
+    {%- capture doc_stem -%}
+      {%- for part in name_parts limit: keep_count -%}
+        {%- unless forloop.first -%}.{%- endunless -%}{{ part }}
+      {%- endfor -%}
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Build the candidate sibling URL for each configured language. {%- endcomment -%}
+{%- assign alternates = '' | split: '' -%}
+{%- assign en_url = dir_path | append: doc_stem -%}
+{%- capture en_entry -%}en|{{ en_url }}{%- endcapture -%}
+{%- assign alternates = alternates | push: en_entry -%}
+{%- for l in site.legal_languages -%}
+  {%- capture l_url -%}{{ dir_path }}{{ doc_stem }}.{{ l }}{%- endcapture -%}
+  {%- capture l_entry -%}{{ l }}|{{ l_url }}{%- endcapture -%}
+  {%- assign alternates = alternates | push: l_entry -%}
+{%- endfor -%}
+
+{%- comment -%} Keep only the variants Jekyll actually built. {%- endcomment -%}
+{%- assign existing = '' | split: '' -%}
+{%- for entry in alternates -%}
+  {%- assign bits = entry | split: '|' -%}
+  {%- assign cand = bits[1] -%}
+  {%- for p in site.pages -%}
+    {%- assign p_url = p.url | remove: '.html' -%}
+    {%- if p_url == cand -%}
+      {%- assign existing = existing | push: entry -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+{%- assign current_lang = lang_suffix | default: 'en' -%}
+{%- if lang_suffix == '' -%}{%- assign current_lang = 'en' -%}{%- endif -%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ current_lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+{%- comment -%}
+  hreflang alternates so search engines treat the variants as one document in
+  several languages rather than as duplicate pages.
+{%- endcomment -%}
+{%- if existing.size > 1 %}
+{% for entry in existing -%}
+{%- assign bits = entry | split: '|' -%}
+<link rel="alternate" hreflang="{{ bits[0] }}" href="{{ bits[1] | absolute_url }}">
+{% endfor -%}
+{%- endif %}
 
 <!-- Applied before first paint so an explicitly chosen theme never flashes the
      other palette on load. Must stay inline and blocking in <head>. -->
@@ -189,12 +270,22 @@
 
   img { max-width: 100%; height: auto; }
 
-  /* Theme toggle */
-  .theme-toggle {
+  /* Shared control cluster: the theme toggle and (when a translation exists)
+     the language switch sit side by side. Only the cluster is positioned, so
+     the two controls can never overlap each other. */
+  .controls {
     position: fixed;
     top: 0.9rem;
     right: 0.9rem;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Theme toggle and language switch share one pill shape. */
+  .theme-toggle,
+  .lang-switch {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -209,13 +300,24 @@
     box-shadow: 0 1px 3px var(--shadow);
     cursor: pointer;
   }
-  .theme-toggle:hover { border-color: var(--text-muted); }
-  .theme-toggle:focus-visible {
+  .theme-toggle:hover,
+  .lang-switch:hover { border-color: var(--text-muted); }
+  .theme-toggle:focus-visible,
+  .lang-switch:focus-visible {
     outline: 2px solid var(--link);
     outline-offset: 2px;
   }
 
-  .theme-toggle .icon { font-size: 1rem; }
+  .theme-toggle .icon,
+  .lang-switch .icon { font-size: 1rem; }
+
+  /* Language is a navigation change, not a stored preference: the switch is a
+     plain link so each variant keeps its own shareable, indexable URL. */
+  .lang-switch {
+    text-decoration: none;
+    color: var(--text);
+  }
+  .lang-switch:hover { text-decoration: none; }
 
   /* Each palette shows only the affordance for the palette it switches TO. */
   .theme-toggle .to-dark { display: inline; }
@@ -229,7 +331,8 @@
   :root[data-theme="dark"] .theme-toggle .to-dark { display: none; }
   :root[data-theme="dark"] .theme-toggle .to-light { display: inline; }
 
-  /* Toggle is useless without JS, and its label would then be wrong. */
+  /* Toggle is useless without JS, and its label would then be wrong. The
+     language switch is a plain link, so it keeps working without JS. */
   .no-js .theme-toggle { display: none; }
 
   footer {
@@ -243,17 +346,47 @@
   footer a { color: var(--text-muted); text-decoration: underline; }
 
   @media print {
-    .theme-toggle { display: none; }
+    .controls { display: none; }
     body { padding: 0; color: #000; background: #fff; }
   }
 </style>
 </head>
 <body class="no-js">
 
-<button type="button" class="theme-toggle" id="theme-toggle" aria-live="polite">
-  <span class="icon to-dark" aria-hidden="true">&#9789;</span><span class="to-dark">Dark</span>
-  <span class="icon to-light" aria-hidden="true">&#9788;</span><span class="to-light">Light</span>
-</button>
+<div class="controls">
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-live="polite">
+    <span class="icon to-dark" aria-hidden="true">&#9789;</span><span class="to-dark">Dark</span>
+    <span class="icon to-light" aria-hidden="true">&#9788;</span><span class="to-light">Light</span>
+  </button>
+
+  {%- comment -%}
+    Render one switch per OTHER language that actually exists for this document.
+    Labelled by the language it switches TO, mirroring the theme toggle's "Dark"
+    / "Light" convention. `hreflang` + `lang` let screen readers change
+    pronunciation and let crawlers index each variant correctly.
+  {%- endcomment -%}
+  {%- for entry in existing -%}
+    {%- assign bits = entry | split: '|' -%}
+    {%- assign entry_lang = bits[0] -%}
+    {%- unless entry_lang == current_lang -%}
+      {%- case entry_lang -%}
+        {%- when 'es' -%}
+          {%- assign label = 'Español' -%}
+          {%- assign aria = 'Ver en español' -%}
+        {%- when 'en' -%}
+          {%- assign label = 'English' -%}
+          {%- assign aria = 'View in English' -%}
+        {%- else -%}
+          {%- assign label = entry_lang | upcase -%}
+          {%- capture aria -%}View in {{ entry_lang | upcase }}{%- endcapture -%}
+      {%- endcase -%}
+  <a class="lang-switch" href="{{ bits[1] | relative_url }}"
+     lang="{{ entry_lang }}" hreflang="{{ entry_lang }}" aria-label="{{ aria }}">
+    <span class="icon" aria-hidden="true">&#127760;</span><span>{{ label }}</span>
+  </a>
+    {%- endunless -%}
+  {%- endfor -%}
+</div>
 
 <main>
   {{ content }}

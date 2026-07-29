@@ -18,6 +18,15 @@ description: Privacy policies and terms of service for apps developed by HTBR.
 kramdown:
   hard_wrap: true
 
+# Translated variants are stored as a sibling file with a BCP-47 base subtag
+# before the extension: privacy-policy.md (English, authoritative) and
+# privacy-policy.es.md (Spanish). The layout derives the language switch from
+# the filename, so a subtag only counts as a language if it is listed here —
+# that keeps a document legitimately containing a dot from being mistaken for a
+# translation. Add a subtag here when a new language is first published.
+legal_languages:
+  - es
+
 defaults:
   - scope:
       path: ""
