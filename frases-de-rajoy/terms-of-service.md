@@ -3,6 +3,8 @@
 **Effective date:** 2026-05-13
 **Last updated:** 2026-05-13
 
+> This English version is the authoritative one. Translations are provided for convenience only; in case of any discrepancy, the English version prevails.
+
 These Terms of Service ("Terms") govern your use of the mobile application Frases de Rajoy ("the App"), provided by HTBR ("we", "us", or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms.
 
 If you do not agree to these Terms, do not use the App.

@@ -11,5 +11,5 @@ These documents are published for the purpose of providing transparency to users
 ## Apps covered
 
 - Focused — [link to repository](https://github.com/javirozalen/Focused.git)
-- Frases de Rajoy — [Privacy Policy](https://javirozalen.github.io/legal/frases-de-rajoy/privacy-policy) · [Terms of Service](https://javirozalen.github.io/legal/frases-de-rajoy/terms-of-service)
+- Frases de Rajoy — [Privacy Policy](https://javirozalen.github.io/legal/frases-de-rajoy/privacy-policy) · [Terms of Service](https://javirozalen.github.io/legal/frases-de-rajoy/terms-of-service) — español: [Política de Privacidad](https://javirozalen.github.io/legal/frases-de-rajoy/privacy-policy.es) · [Términos del Servicio](https://javirozalen.github.io/legal/frases-de-rajoy/terms-of-service.es)
 - Vulto — [Privacy Policy](https://javirozalen.github.io/legal/vulto/privacy-policy) · [Terms of Service](https://javirozalen.github.io/legal/vulto/terms-of-service)

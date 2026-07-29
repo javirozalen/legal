@@ -1,7 +1,9 @@
 # Privacy Policy for Frases de Rajoy
 
 **Effective date:** 2026-05-13
-**Last updated:** 2026-05-13
+**Last updated:** 2026-07-26
+
+> This English version is the authoritative one. Translations are provided for convenience only; in case of any discrepancy, the English version prevails.
 
 This Privacy Policy describes how HTBR ("we", "us", or "our") collects, uses, and shares personal information when you use the mobile application Frases de Rajoy ("the App"). HTBR is a trading name used by an individual developer (autónomo) based in Spain. For service-provider identification purposes under Spain's Ley 34/2002 (LSSI-CE), you can reach the developer at the contact email below.
 
@@ -31,14 +33,13 @@ In particular, the App:
 - Does not request access to your contacts, location, microphone, camera, photo library, calendar, health data, biometric data, Bluetooth, or any other sensitive resource.
 - Does not use cookies (the App is a native mobile application; it has no web component).
 
-The only data stored on your device is two non-personal application preferences:
+The only data stored on your device is a single non-personal application preference:
 
 | Preference | Type | Purpose |
 |---|---|---|
 | `are_notifications_paused` | Boolean (true/false) | Remembers whether you have paused the daily notification |
-| `is_dark_mode_override` | Boolean (true/false) | Remembers your manual override of the light/dark theme |
 
-These preferences are stored locally on your device using AndroidX DataStore — a small file-based preference store. On Android, the file lives inside the App's private storage directory; on iOS, the same library writes to a file inside the App's sandbox. In both cases, the data never leaves your device, is not transmitted anywhere, and cannot be linked to your identity.
+This preference is stored locally on your device using AndroidX DataStore — a small file-based preference store. On Android, the file lives inside the App's private storage directory; on iOS, the same library writes to a file inside the App's sandbox. In both cases, the data never leaves your device, is not transmitted anywhere, and cannot be linked to your identity.
 
 If you grant the App permission to display notifications, the operating system retains a record of that permission grant. That record is managed by the operating system (Android or iOS) and is not accessible to us.
 
@@ -48,7 +49,7 @@ If you believe we have collected information not disclosed here, please contact 
 
 Because we do not collect personal information, we do not use it for any purpose.
 
-The two non-personal preferences described in Section 2 are used solely to make the App behave as you configured it (whether notifications are paused; which theme is displayed). They are not used for profiling, advertising, or any automated decision-making.
+The non-personal preference described in Section 2 is used solely to make the App behave as you configured it (whether notifications are paused). It is not used for profiling, advertising, or any automated decision-making.
 
 We do not use personal information for automated decision-making that produces legal or similarly significant effects on you.
 
@@ -66,9 +67,9 @@ Distribution of the App itself is handled by Apple (App Store) and Google (Googl
 
 We retain no personal information because we collect none.
 
-The two non-personal preferences described in Section 2 remain on your device until you:
+The non-personal preference described in Section 2 remains on your device until you:
 
-- Toggle them through the App's interface, or
+- Toggle it through the App's interface, or
 - Clear the App's data through your operating system's settings, or
 - Uninstall the App.
 
@@ -102,7 +103,7 @@ To exercise any of these rights, contact us at htbr.app@gmail.com.
 
 ## 7. Security
 
-The App stores its two non-personal preferences in the standard storage areas provided by the operating system, which apply the platform's default isolation (Android per-app data directory, iOS app sandbox). Other apps on your device cannot read this data.
+The App stores its non-personal preference in the standard storage areas provided by the operating system, which apply the platform's default isolation (Android per-app data directory, iOS app sandbox). Other apps on your device cannot read this data.
 
 Because the App makes no network requests, no data leaves your device, and therefore there is no transmission to secure.
 
