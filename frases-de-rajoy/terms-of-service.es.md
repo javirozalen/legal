@@ -1,7 +1,7 @@
 # Términos del Servicio de Frases de Rajoy
 
 **Fecha de entrada en vigor:** 2026-05-13
-**Última actualización:** 2026-05-13
+**Última actualización:** 2026-08-02
 
 > Esta traducción se ofrece por comodidad. En caso de discrepancia, prevalece la versión en inglés.
 
@@ -117,15 +117,39 @@ Cualquier controversia derivada de estos Términos o del uso que usted haga de l
 
 Si usted es un **consumidor residente en la Unión Europea**, esta cláusula no le priva de la protección de las normas imperativas de consumo de su país de residencia. Conforme al Reglamento (UE) 1215/2012 (Bruselas I bis), artículos 17 a 19, conserva el derecho a demandarnos ante los tribunales de su país de residencia, y nosotros solo podremos demandarle ante esos mismos tribunales. Los consumidores de la UE pueden además utilizar la plataforma de Resolución de Litigios en Línea de la Comisión Europea en [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/).
 
-## 12. Acuerdo íntegro
+## 12. Condiciones adicionales para usuarios que descargaron la App en la Apple App Store
+
+Esta sección se aplica únicamente si usted obtuvo la App en la Apple App Store. Contiene las condiciones mínimas que Apple exige incluir en toda aplicación licenciada (Apple Media Services Terms and Conditions, Schedule 1). En caso de conflicto entre esta sección y cualquier otra parte de estos Términos, prevalecerá esta sección para las descargas realizadas en la App Store, salvo que nada de lo dispuesto en esta sección limita, renuncia ni deja sin efecto los derechos irrenunciables del consumidor preservados en las Secciones 7, 8 y 11, que continúan siendo plenamente aplicables.
+
+**Reconocimiento.** Estos Términos se celebran entre usted y HTBR únicamente, y no con Apple Inc. ("Apple"). HTBR, y no Apple, es el único responsable de la App y de su contenido.
+
+**Alcance de la licencia.** La licencia que se le concede en la Sección 3 es una licencia intransferible para utilizar la App en cualquier dispositivo de marca Apple que usted posea o controle, según lo permitido por las Usage Rules de los Apple Media Services Terms and Conditions, salvo que también podrá ser utilizada por otras cuentas asociadas a usted mediante Family Sharing o compras por volumen.
+
+**Mantenimiento y soporte.** HTBR es el único responsable de prestar cualquier servicio de mantenimiento y soporte de la App, según se especifique en estos Términos o según exija la legislación aplicable. Apple no tiene obligación alguna de prestar servicios de mantenimiento o soporte respecto de la App.
+
+**Garantía.** En caso de que la App no se ajuste a alguna garantía aplicable, usted podrá notificarlo a Apple, y Apple le reembolsará el precio de compra de la App. La App se ofrece de forma gratuita, por lo que el importe del reembolso es cero. En la máxima medida permitida por la legislación aplicable, Apple no tendrá ninguna otra obligación de garantía respecto de la App. Cualquier otra reclamación, pérdida, responsabilidad, daño, coste o gasto atribuible al incumplimiento de una garantía será responsabilidad exclusiva de HTBR. Lo anterior no afecta a sus derechos como consumidor conforme a la legislación española y de la Unión Europea.
+
+**Reclamaciones sobre el producto.** HTBR, y no Apple, es responsable de atender cualquier reclamación relativa a la App o a su posesión y uso de la misma, incluyendo, sin carácter limitativo: (i) reclamaciones por responsabilidad por producto; (ii) cualquier reclamación por el incumplimiento por parte de la App de algún requisito legal o reglamentario aplicable; y (iii) reclamaciones derivadas de la normativa de protección de los consumidores, de privacidad o similar.
+
+**Reclamaciones de propiedad intelectual.** En caso de que un tercero reclame que la App o su posesión y uso de la misma infringen sus derechos de propiedad intelectual, HTBR, y no Apple, será el único responsable de la investigación, defensa, transacción y resolución de dicha reclamación.
+
+**Cumplimiento normativo.** Usted declara y garantiza que no se encuentra en un país sujeto a embargo por parte del Gobierno de los Estados Unidos ni designado por dicho Gobierno como país "que apoya el terrorismo", y que no figura en ninguna lista del Gobierno de los Estados Unidos de partes prohibidas o restringidas.
+
+**Condiciones de terceros.** Usted deberá cumplir las condiciones aplicables de terceros cuando utilice la App.
+
+**Terceros beneficiarios.** Apple y sus filiales son terceros beneficiarios de estos Términos y, una vez que usted acepte estos Términos, Apple tendrá el derecho (y se entenderá que ha aceptado dicho derecho) de hacer valer estos Términos frente a usted en calidad de tercero beneficiario.
+
+**Contacto.** Cualquier consulta, queja o reclamación relativa a la App debe dirigirse a htbr.app@gmail.com.
+
+## 13. Acuerdo íntegro
 
 Estos Términos, junto con nuestra Política de Privacidad, constituyen el acuerdo íntegro entre usted y HTBR en relación con la App y sustituyen a todos los acuerdos anteriores sobre esta materia.
 
-## 13. Divisibilidad
+## 14. Divisibilidad
 
 Si alguna disposición de estos Términos resultara inexigible o inválida, dicha disposición se limitará o suprimirá en la medida mínima necesaria para que el resto de estos Términos continúe en pleno vigor y efecto.
 
-## 14. Contacto
+## 15. Contacto
 
 Para cualquier consulta sobre estos Términos, contacte con nosotros en:
 

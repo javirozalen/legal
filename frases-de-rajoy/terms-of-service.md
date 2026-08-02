@@ -1,7 +1,7 @@
 # Terms of Service for Frases de Rajoy
 
 **Effective date:** 2026-05-13
-**Last updated:** 2026-05-13
+**Last updated:** 2026-08-02
 
 > This English version is the authoritative one. Translations are provided for convenience only; in case of any discrepancy, the English version prevails.
 
@@ -117,15 +117,39 @@ Any dispute arising from these Terms or from your use of the App shall be subjec
 
 If you are a **consumer based in the European Union**, this clause does not deprive you of the protection of mandatory consumer law in your country of residence. Under Regulation (EU) 1215/2012 (Brussels I bis), Articles 17–19, you retain the right to bring proceedings against us in the courts of your country of residence, and we may only bring proceedings against you in those same courts. EU consumers may additionally use the European Commission's Online Dispute Resolution platform at [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/).
 
-## 12. Entire agreement
+## 12. Additional terms for users who downloaded the App from the Apple App Store
+
+This section applies only if you obtained the App from the Apple App Store. It contains the minimum terms Apple requires every licensed application to include (Apple Media Services Terms and Conditions, Schedule 1). Where this section conflicts with any other part of these Terms, this section prevails for App Store downloads — except that nothing in this section limits, waives, or overrides the non-waivable consumer rights preserved in Sections 7, 8, and 11, which continue to apply in full.
+
+**Acknowledgement.** These Terms are concluded between you and HTBR only, and not with Apple Inc. ("Apple"). HTBR, not Apple, is solely responsible for the App and its content.
+
+**Scope of license.** The license granted to you in Section 3 is a non-transferable license to use the App on any Apple-branded device that you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions, except that it may be accessed by other accounts associated with you via Family Sharing or volume purchasing.
+
+**Maintenance and support.** HTBR is solely responsible for providing any maintenance and support services for the App, as specified in these Terms or as required under applicable law. Apple has no obligation whatsoever to furnish any maintenance or support services for the App.
+
+**Warranty.** In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App to you. The App is provided free of charge, so the refund amount is zero. To the maximum extent permitted by applicable law, Apple has no other warranty obligation whatsoever with respect to the App. Any other claims, losses, liabilities, damages, costs, or expenses attributable to a failure to conform to any warranty are the sole responsibility of HTBR. This does not affect your statutory rights as a consumer under Spanish or EU law.
+
+**Product claims.** HTBR, not Apple, is responsible for addressing any claims relating to the App or your possession and use of it, including but not limited to: (i) product liability claims; (ii) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation.
+
+**Intellectual property claims.** In the event of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, HTBR, not Apple, is solely responsible for the investigation, defense, settlement, and discharge of that claim.
+
+**Legal compliance.** You represent and warrant that you are not located in a country subject to a U.S. Government embargo or designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties.
+
+**Third-party terms.** You must comply with any applicable third-party terms of agreement when using the App.
+
+**Third-party beneficiary.** Apple and its subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.
+
+**Contact.** Any questions, complaints, or claims regarding the App should be directed to htbr.app@gmail.com.
+
+## 13. Entire agreement
 
 These Terms, together with our Privacy Policy, constitute the entire agreement between you and HTBR regarding the App and supersede all prior agreements on this subject.
 
-## 13. Severability
+## 14. Severability
 
 If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the rest of these Terms remain in full force and effect.
 
-## 14. Contact
+## 15. Contact
 
 For any questions about these Terms, contact us at:
 
